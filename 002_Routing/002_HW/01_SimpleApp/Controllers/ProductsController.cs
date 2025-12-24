@@ -29,12 +29,10 @@ namespace SimpleApp.Controllers
         {
             List<Product> products = _reader.ReadFromFile();
             if (id == null)
-            { 
+            {
                 return View("List", products);
             }
-            List<Product> filteredProducts = products
-                .Where(x => x.Category == id)
-                .ToList();
+            List<Product> filteredProducts = [.. products.Where(x => string.Equals(x.Category, id, StringComparison.OrdinalIgnoreCase))];
             // Повернення уявлення List та передача уявленню моделі у вигляді колекції products
             // Отримати доступ до колекції у виставі можна буде через властивість представлення Model
             return View("List", filteredProducts);
@@ -44,7 +42,7 @@ namespace SimpleApp.Controllers
         public IActionResult Details(int id)
         {
             List<Product> products = _reader.ReadFromFile();
-            Product product = products.Where(x => x.Id == id).FirstOrDefault();
+            Product? product = products.Where(x => x.Id == id).FirstOrDefault();
 
             if (product != null)
             {
