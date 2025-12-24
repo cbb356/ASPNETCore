@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div>
+    <p>Home Controller. Index View</p>
+    <a asp-controller="Calc" asp-action="Add" asp-route-x="20" , asp-route-y="10">Calculate 20 + 10</a>
+    <br />
+    <a asp-controller="Calc" asp-action="Sub" asp-route-x="20" , asp-route-y="10">Calculate 20 - 10</a>
+    <br />
+    <a asp-controller="Calc" asp-action="Mul" asp-route-x="20" , asp-route-y="10">Calculate 20 * 10</a>
+    <br />
+    <a asp-controller="Calc" asp-action="Div" asp-route-x="20" , asp-route-y="10">Calculate 20 / 10</a>
+</div>

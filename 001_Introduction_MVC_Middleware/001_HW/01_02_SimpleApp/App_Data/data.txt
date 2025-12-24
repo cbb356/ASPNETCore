@@ -1,0 +1,6 @@
+﻿1, Mobile Phone, 600, Xiaomi Redmi Note 13, 5
+2, Laptop, 3200, Lenovo XT-456, 2
+3, Keyboard, 35, Mitsumi 101 key, 0
+4, Mouse, 10, Logitech M-101, 7
+5, Pen, 1, Bic 103, 65
+6, Notebook, 1, Red leather, 3
